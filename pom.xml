@@ -12,7 +12,16 @@
       <!-- This property will be set by the Maven Dependency plugin -->
       <annotatedJdk>${org.checkerframework:jdk8:jar}</annotatedJdk>
   </properties>
-
+<distributionManagement>
+   <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://172.16.16.101:8081/repository/maven-snapshots</url>
+   </snapshotRepository>
+   <repository>
+      <id>nexus-releases</id>
+      <url>http://172.16.16.101:8081/repository/maven-releases</url>
+   </repository>
+</distributionManagement>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
